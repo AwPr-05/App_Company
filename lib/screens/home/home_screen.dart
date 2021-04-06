@@ -5,60 +5,60 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            // Bola verde
-            Positioned(
-              top: -90,
-              left: -160,
-              child: Container(
-                height: 470,
-                width: 470,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [Colors.green, Colors.green, Colors.black],
-                      begin: Alignment.topLeft),
-                  color: Colors.green,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black,
-                      spreadRadius: 5,
-                      blurRadius: 10,
-                    ),
-                  ],
-                ),
+      body: Stack(
+        children: [
+          // Bola verde
+          Positioned(
+            top: -90,
+            left: -160,
+            child: Container(
+              height: 470,
+              width: 470,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Colors.green, Colors.green, Colors.black],
+                    begin: Alignment.topLeft),
+                color: Colors.green,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    spreadRadius: 5,
+                    blurRadius: 10,
+                  ),
+                ],
               ),
             ),
+          ),
 
-          //  Bola pequena 
-            // Positioned(
-            //   right: -70,
-            //   bottom: -65,
-            //   child: Container(
-            //     height: 250,
-            //     width: 250,
-            //     decoration: BoxDecoration(
-            //       color: Colors.green,
-            //       shape: BoxShape.circle,
-            //       boxShadow: [
-            //         BoxShadow(
-            //           color: Colors.black,
-            //           spreadRadius: 5,
-            //           blurRadius: 10,
-            //         ),
-            //       ],
-            //       gradient: LinearGradient(
-            //         colors: [Colors.black,Colors.black, Colors.green],
-            //         begin: Alignment.topLeft,
-            //       ),
-            //     ),
-            //   ),
-            // ),
+          //  Bola pequena
+          // Positioned(
+          //   right: -70,
+          //   bottom: -65,
+          //   child: Container(
+          //     height: 250,
+          //     width: 250,
+          //     decoration: BoxDecoration(
+          //       color: Colors.green,
+          //       shape: BoxShape.circle,
+          //       boxShadow: [
+          //         BoxShadow(
+          //           color: Colors.black,
+          //           spreadRadius: 5,
+          //           blurRadius: 10,
+          //         ),
+          //       ],
+          //       gradient: LinearGradient(
+          //         colors: [Colors.black,Colors.black, Colors.green],
+          //         begin: Alignment.topLeft,
+          //       ),
+          //     ),
+          //   ),
+          // ),
 
-            //  Conteudo
-            ListView(
+          //  Conteudo
+          SafeArea(
+            child: ListView(
               padding: EdgeInsets.only(left: 20, right: 20, top: 40),
               children: [
                 //  AppBar
@@ -100,7 +100,8 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: true, //! cresce ate o tamanho de seus filhos
                   crossAxisCount: 2,
                   mainAxisSpacing: 20,
-                  crossAxisSpacing: 20,
+                  crossAxisSpacing: 15,
+                  childAspectRatio: 9 / 11,
                   children: [
                     HomeTile(
                       icon: Icons.ac_unit,
@@ -130,8 +131,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
