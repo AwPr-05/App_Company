@@ -103,30 +103,36 @@ class HomeScreen extends StatelessWidget {
                   crossAxisSpacing: 15,
                   childAspectRatio: 9 / 11,
                   children: [
+
                     HomeTile(
                       icon: Icons.ac_unit,
                       title: "Meus Projetos",
                       subTitle: "64 Projetos",
                     ),
+
                     HomeTile(
                       title: "Flutter",
                       subTitle: "5 Projetos",
                     ),
+
                     HomeTile(
                       icon: Icons.fire_extinguisher,
                       title: "Documentos",
                       subTitle: "Bombeiros",
                     ),
+
                     HomeTile(
                       icon: Icons.shop,
                       title: "Negocios",
                       subTitle: "Clientes Google",
                     ),
+
                     HomeTile(
                       icon: Icons.local_airport,
                       title: "Viagens",
                       subTitle: "7 Marcaçōes",
                     ),
+                    
                   ],
                 ),
               ],
